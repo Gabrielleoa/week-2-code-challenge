@@ -11,3 +11,4 @@
 -create a CSS page that styles the webpage and makes it look creative
 - implement the DOM Manipulation in script.js
 -use het to request the information from the json server
+Author:Gabrielle Odhiambo
