@@ -9,14 +9,15 @@ fetch(baseURL)
        
     });
 document.addEventListener("DOMContentLoaded", () => {
-    console.log('voted!')
-    const animalList = document.getElementById('animalList');
-            const voteButton = document.getElementById('voteButton');
-            voteButton.addEventListener('click', () => {
-                alert("voted");
-            });
-         
-        })
+    console.log('after DOM loaded')
+})
+    console.log('Before DOM Loads')
+    console.log(document.querySelector('div')) 
+
+    addEventListener('submit', (event) => {});
+    onsubmit = (event) => {};
+    event.preventDefault();
+       
 animals.forEach(animal => {
     const animalNameElement = document.createElement("li");
     animalNameElement.textContent = animal.name;
