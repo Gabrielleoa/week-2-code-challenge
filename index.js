@@ -5,32 +5,38 @@ fetch("http://localhost:3000/characters",{
     headers : {
         "Content-Type": "application/json"
     }
-}).then(data => data.json())
+})
+//.then(data => data.json())
 .then( response => {
-    displayCharacters(response)
-    console.log(displayCharacters)
+    //displayCharacters(response)
+   // console.log(displayCharacters)
+   return response.json();
+
+})
+.then(data => {
+    console.log('recieved', data);
 })
 }
 function getDisplay(){
-    const characterbar = document.getElementById("character-bar")
+    const characterArea = document.getElementById("character-bar")
     for(character of characters){
-        console.log(character.name)
+        console.log(characters.name)
         const span = document.createElement("span");
-        span.innerText = character.name;
-        characterbar.appendChild(span)
-        span.setAttribute('id', character.id)
+        span.innerText = characters.name;
+        characterArea.appendChild(span)
+        span.setAttribute('id', characters.id)
 
         span.addEventListener('click', (event)=> {
             displayCharacterDetails(characterById)
 
         });
-        characterbar.appendChild(span)
+        characterArea.appendChild(span)
     }
 }
-function fetchId (character, id){
+function fetchId (characters, id){
     console.log(id)
-    return character.find(character)
-        return character.id ===id
+    return characters.find(character)
+        return characters.id ===id
     }
 
 

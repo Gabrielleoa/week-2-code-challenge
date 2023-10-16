@@ -1,5 +1,5 @@
 h1 {
-    color: blueviolet;
+    color:cadetblue;
 }
 
 form{
@@ -8,6 +8,22 @@ form{
 p{
     text-align: center;
 }
-h4.span{
-color-scheme: green;
+body{
+    background-color: blanchedalmond;
+}
+h1{
+    text-align: center;
+}
+#character.bar{
+    width: 252px;
+  height: 165px;
+  background: #7fffd4(127,255,212);
+  margin-left: 163px;
+  padding-top: 25px;
+}
+h4{
+    text-align: center;
+}
+button{
+    text-align: center;
 }
