@@ -6,18 +6,16 @@ fetch("http://localhost:3000/characters",{
         "Content-Type": "application/json"
     }
 })
-//.then(data => data.json())
+.then(data => data.json())
 .then( response => {
-    //displayCharacters(response)
-   // console.log(displayCharacters)
-   return response.json();
+    characters =[...response]
+    fetchAnimalData(response)
+   console.log(characters);
+   //return response.json();
 
 })
-.then(data => {
-    console.log('recieved', data);
-})
 }
-function getDisplay(){
+function getDisplay(characters){
     const characterArea = document.getElementById("character-bar")
     for(character of characters){
         console.log(characters.name)
