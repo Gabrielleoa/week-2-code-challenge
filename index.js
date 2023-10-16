@@ -59,8 +59,12 @@ function getDisplay(){
 }
 function fetchId (character, id){
     console.log(id)
-    return character.find(character)=> {
+    return character.find(character)
         return character.id ===id
     }
+
+
+function getChatacterInfo(character){
+    const image = document.querySelectorAll("#image")
 
 }
