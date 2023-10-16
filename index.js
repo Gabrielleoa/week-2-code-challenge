@@ -6,11 +6,11 @@ fetch("http://localhost:3000/characters",{
         "Content-Type": "application/json"
     }
 })
-.then(data => data.json())
+//.then(data => data.json())
 .then( response => {
     characters =[...response]
     fetchAnimalData(response)
-   console.log(characters);
+    console.log(response.json());
    //return response.json();
 
 })
@@ -40,5 +40,6 @@ function fetchId (characters, id){
 
 function getChatacterInfo(character){
     const image = document.querySelectorAll("#image")
+    image.src=character.image;
 
 }
