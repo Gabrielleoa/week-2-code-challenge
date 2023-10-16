@@ -1,4 +1,10 @@
-body {
-    background-color:crimson
+h1 {
+    color: blueviolet;
 }
 
+form{
+    text-align: center;
+}
+p{
+    text-align: center;
+}
