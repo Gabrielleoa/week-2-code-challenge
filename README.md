@@ -1,9 +1,9 @@
 # week-2-code-challenge
-#TITLE:
+    ## TITLE.
  Week-3 code challenge; FLATACUTIES
 #DESCRIPTION
 -write an application that counts the votes and shows them
-#instructions 
+## instructions. 
 -create a new repository in your github account and name it
 -open and clone it in your repository 
 - create a db.json file and run it in the terminal
