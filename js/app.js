@@ -1,73 +1,32 @@
+const baseURL = 'http://localhost:3000/characters'
 
-console.log('hello')
-document.addEventListener("DOMContentLoaded", function(){
-
-})
+console.log("Sam")
 getCharacterList()
-const baseURL='http://localhost:3000/characters'
-
-function displayCharacterNames(characters) {
-    characters.forEach((character) => {
-        const characterName = document.createElement('span');
-        characterName.textContent = character.name;
-
-        characterName.addEventListener('click', () => {
-        });
-
-        characterBar.appendChild(characterName);
-    });
-}
-
-function displayCharacterDetails(character) {
-}
-
 function getCharacterList(){
-    fetch(baseURL, {
-        method: "GET",
-        headers: {
-            "Content-Type": "application/json"
-        }
-    })
-.then(response => response.json())
-.then(data=> {
-    const characterList = document.getElementById('character-list');
-
-    data.characters.forEach(character=> {
-        const li = document.createAttribute('li');
-        li.innerText= character.name;
-        characterList.appendChild(li);
-
-
+    fetch(baseURL) 
+        .then((response) => response.json())
+        .then(data => {
+            displayCharacterNames(data),
+        console.log(data);
+ 
         
-
-    })
-})
-
-}
+        })
+    
+    }
+function getCharacterInfo(character){
+        const characterDetails = document.getElementById('characterInfo');
+        characterDetails.innerHTML = `<h2 id="data">${character.name}</h2>
+        <img src="${character.image}" alt="${character.name} Image">
+        <p>Votes: ${character.votes}</p>`;
+    }
 
 function displayCharacterNames(characters) {
     const characterArea= document.getElementById("character-bar")
     for(const character of characters) {
-        console.log(character.name);
-        const span = document.createElement("span");
-        span.innerText= character.name;
-        characterArea.appendChild(span);
-        span.addEventListener('click', (event)=>{
-
-        })
-    }
-      function displayCharacterDetails(character) {
-      }
-function fetchId (characters, id){
-    const characterFound= characters.find(character => character.id===id);
-    return characterFound;
-    {
-function getChatacterInfo(character){
-    const image = document.querySelectorAll("#image")[0];
-    image.setAttribute=('src', character.image);
-        
-
-    }
-}
-
-}}
+        console.log(character)
+        let animals = document.getElementById("name")
+        let li = document.createElement('li')
+        li.textContent= character.name
+        li.addEventListener('click', () => getCharacterInfo(character));
+        animals.appendChild(li)
+    }}
