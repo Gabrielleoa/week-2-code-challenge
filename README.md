@@ -1,5 +1,5 @@
 # week-2-code-challenge
-    ## TITLE.
+    ## Title.
  Week-3 code challenge; FLATACUTIES
 #DESCRIPTION
 -write an application that counts the votes and shows them
