@@ -6,6 +6,20 @@ document.addEventListener("DOMContentLoaded", function(){
 getCharacterList()
 const baseURL='http://localhost:3000/characters'
 
+function displayCharacterNames(characters) {
+    characters.forEach((character) => {
+        const characterName = document.createElement('span');
+        characterName.textContent = character.name;
+
+        characterName.addEventListener('click', () => {
+        });
+
+        characterBar.appendChild(characterName);
+    });
+}
+
+function displayCharacterDetails(character) {
+}
 
 function getCharacterList(){
     fetch(baseURL, {
