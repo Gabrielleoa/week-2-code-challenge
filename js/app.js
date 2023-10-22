@@ -1,6 +1,5 @@
-const baseURL = 'http://localhost:3000/characters'
+const baseURL = 'https://my-json-server.typicode.com/gabrielleoa/week-2-code-challenge/characters'
 
-console.log("Sam")
 getCharacterList()
 function getCharacterList(){
     fetch(baseURL) 
@@ -13,12 +12,6 @@ function getCharacterList(){
         })
     
     }
-function getCharacterInfo(character){
-        const characterDetails = document.getElementById('characterInfo');
-        characterDetails.innerHTML = `<h2 id="data">${character.name}</h2>
-        <img src="${character.image}" alt="${character.name} Image">
-        <p>Votes: ${character.votes}</p>`;
-    }
 
 function displayCharacterNames(characters) {
     const characterArea= document.getElementById("character-bar")
@@ -30,3 +23,10 @@ function displayCharacterNames(characters) {
         li.addEventListener('click', () => getCharacterInfo(character));
         animals.appendChild(li)
     }}
+    function getCharacterInfo(character){
+        const characterDetails = document.getElementById('characterInfo');
+        characterDetails.innerHTML = `<h2 id="data">${character.name}</h2>
+        <img src="${character.image}" alt="${character.name} Image">
+        <p>Votes: ${character.votes}</p>`;
+        preventDefault()
+    }
